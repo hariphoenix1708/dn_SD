@@ -10,14 +10,14 @@ from preprocessing.preprocess import preprocess
 from sd_api import inpaint
 
 # Bot token can be obtained via https://t.me/BotFather
-API_TOKEN = os.environ["1858827137:AAFZVaKOjAhjVyCXfiGgL-SK6dp7_lILZIE"]
+API_TOKEN = os.environ["API_TOKEN"]
 
 # All handlers should be attached to the Router (or Dispatcher)
 router = Router()
 
 
 # Initialize Bot instance with a default parse mode which will be passed to all API calls
-bot = Bot(1858827137:AAFZVaKOjAhjVyCXfiGgL-SK6dp7_lILZIE, parse_mode="HTML")
+bot = Bot(API_TOKEN, parse_mode="HTML")
 
 @router.message(Command(commands=["start"]))
 async def command_start_handler(message: Message) -> None:
