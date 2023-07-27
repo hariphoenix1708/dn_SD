@@ -25,13 +25,12 @@ jobs:
         python-version: "3.10"
     - name: Install dependencies
       run: |
-        git clone https://github.com/hariphoenix1708/dn-1
         cd preprocessing
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Lint with flake8
       run: |
-        cd /home/runner/work/dn-1
+        python bot.py
     - name: Test with pytest
       run: |
-        python bot.py
+        pytest
