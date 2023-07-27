@@ -28,12 +28,13 @@ jobs:
         sudo apt-get update -y
         sudo apt-get install aria2 -y
         pwd
+        ls
         aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/phoenix-1708/DR_NED/resolve/main/checkpoints.zip -d /home/runner/work/dn/checkpoints -o checkpoints.zip
-        unzip /home/runner/work/dn/checkpoints/checkpoints.zip
+        unzip /home/runner/work/dn/dn/checkpoints/checkpoints.zip
         ls
-        cp *.lib /home/runner/work/dn/checkpoints
+        mv *.lib /home/runner/work/dn/dn/checkpoints
         ls
-        cd checkpoints
+        cd /home/runner/work/dn/dn/checkpoints
         ls
        # cd preprocessing
        # python -m pip install --upgrade pip
