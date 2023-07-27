@@ -25,9 +25,9 @@ jobs:
         python-version: "3.10"
     - name: Install dependencies
       run: |
-        apt-get update -y
-        apt-get install aria2 -y
-        mkdir checkpoints
+        sudo apt-get update -y
+        sudo apt-get install aria2 -y
+        sudo mkdir checkpoints
         aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/phoenix-1708/DR_NED/resolve/main/checkpoints.zip -d /home/runner/work/dn/checkpoints -o checkpoints.zip
         unzip /home/runner/work/dn/checkpoints/checkpoints.zip
         cp *.lib /home/runner/work/dn/checkpoints
