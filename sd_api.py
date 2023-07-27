@@ -9,15 +9,15 @@ async def inpaint(image: bytes, mask: bytes) -> bytes:
     async with httpx.AsyncClient(timeout=None) as client:
         r = await client.post(
             #"http://localhost:7861/sdapi/v1/img2img",
-            "https://653a-35-227-162-119.ngrok.io/sdapi/v1/img2img",
+            "https://d205-35-247-115-35.ngrok.io/sdapi/v1/img2img",
             json={
                 "init_images": [image],
                 "resize_mode": "1",
                 "denoising_strength": 0.9,
                 "mask": mask,
                 "mask_blur": 8,
-                "prompt": "fully nude fit girl, big perfect sexy breast, sexy body, completly nude, hyper detailed, intricate skin texture, (goosebumps:1.3)",
-                "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, clothes, bikini, bra, panties, lingerie, saree",
+                "prompt": "fully nude fit girl, perfect sexy breast, perfect hands, realistic hands, extremely detailed hands, individual fingers, intricate fingers, 8k hands, perfect body, realistic body, extremely detailed body, 8k body hyper detailed, intricate skin texture, unreal engine, (goosebumps:1.3)",
+                "negative_prompt": "deformed eyes, deformed face, deformed iris, deformed pupils, semi-realistic, Asian-Less-Neg, canvas frame, cartoon, 3d, loli, petite, child, infant, toddlers, chibi, (sd character:1.1), ((disfigured)), ((bad art)), ((deformed)),((extra limbs)),((close up)),((b&w)), blurry, (((duplicate))), ((morbid)), ((mutilated)), [out of frame], extra fingers, mutated hands, ((poorly drawn hands)), ((poorly drawn face)), (((mutation))), (((deformed))), ((ugly)), blurry, ((bad anatomy)), (((bad proportions))), ((extra limbs)), cloned face, (((disfigured))), out of frame, ugly, extra limbs, (bad anatomy), gross proportions, (malformed limbs), ((missing arms)), ((missing legs)), (((extra arms))), (((extra legs))), mutated hands, (fused fingers), (too many fingers), (((long neck))), Photoshop, video game, ugly, tiling, poorly drawn hands, poorly drawn feet, poorly drawn face, out of frame, mutation, mutated, extra limbs, extra legs, extra arms, disfigured, deformed, cross-eye, body out of frame, blurry, bad art, bad anatomy, 3d render, (tiara), (crown), (badhands), half body image, upper shot, half-body shot",
                 "steps": 30,
                 "sampler_index": "Euler a",
                 "inpaint_full_res": False,
