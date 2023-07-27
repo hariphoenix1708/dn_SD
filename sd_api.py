@@ -16,7 +16,7 @@ async def inpaint(image: bytes, mask: bytes) -> bytes:
                 "denoising_strength": 0.9,
                 "mask": mask,
                 "mask_blur": 8,
-                "prompt": "fully nude fit girl, big perfect sexy breast, hyper detailed, intricate skin texture, (goosebumps:1.3)",
+                "prompt": "fully nude fit girl, big perfect sexy breast, completly nude, hyper detailed, intricate skin texture, (goosebumps:1.3)",
                 "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation",
                 "steps": 26,
                 "sampler_index": "Euler a",
