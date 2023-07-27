@@ -10,7 +10,8 @@ from preprocessing.preprocess import preprocess
 from sd_api import inpaint
 
 # Bot token can be obtained via https://t.me/BotFather
-API_TOKEN = os.environ["API_TOKEN"]
+#API_TOKEN = os.environ["API_TOKEN"]
+API_TOKEN = "1858827137:AAFZVaKOjAhjVyCXfiGgL-SK6dp7_lILZIE"
 
 # All handlers should be attached to the Router (or Dispatcher)
 router = Router()
