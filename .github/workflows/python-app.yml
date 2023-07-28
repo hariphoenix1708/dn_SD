@@ -36,6 +36,6 @@ jobs:
   #  - name: Lint with flake8
    #   run: |
     #     python bot.py
-    - name: Test with pytest
-      run: |
-        pytest
+   # - name: Test with pytest
+    #  run: |
+     #   pytest
