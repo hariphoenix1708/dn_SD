@@ -27,9 +27,6 @@ jobs:
       run: |
         sudo apt-get update -y
         sudo apt-get install aria2 -y
-        aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/phoenix-1708/DR_NED/resolve/main/checkpoints.zip -d /home/runner/work/dn/dn/checkpoints -o checkpoints.zip
-        unzip /home/runner/work/dn/dn/checkpoints/checkpoints.zip
-        mv *.lib /home/runner/work/dn/dn/checkpoints
         cd preprocessing
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
