@@ -26,14 +26,14 @@ jobs:
       #with:
        # python-version: "3.10"
        # cache: 'pip'
-    - name: Install dependencies
-      run: |
-        sudo apt-get update -y
-        sudo apt-get install aria2 -y
-        cd preprocessing
-        python -m pip install --upgrade pip
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Lint with flake8
+   # - name: Install dependencies
+    #  run: |
+     #   sudo apt-get update -y
+      #  sudo apt-get install aria2 -y
+       # cd preprocessing
+        #python -m pip install --upgrade pip
+        #if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: python bot
       run: |
          python bot.py
    # - name: Test with pytest
