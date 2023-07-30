@@ -1,7 +1,6 @@
 import base64
 import httpx
 
-
 async def inpaint(image: bytes, mask: bytes) -> bytes:
     image = base64.b64encode(image).decode()
     mask = base64.b64encode(mask).decode()
