@@ -31,4 +31,3 @@ async def inpaint(image: bytes, mask: bytes) -> bytes:
 
     result_image = r.json()["images"][0]
     return base64.b64decode(result_image)
-
