@@ -1,4 +1,4 @@
-# This workflow will install Python  run tests and lint with a single version of Pyt
+# This workflow will install Python  run tests and lint with a single version of 
 name: Python application
 
 on:
