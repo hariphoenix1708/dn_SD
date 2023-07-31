@@ -8,8 +8,8 @@ async def inpaint(image: bytes, mask: bytes) -> bytes:
     async with httpx.AsyncClient(timeout=None) as client:
         r = await client.post(
             #"http://localhost:7861/sdapi/v1/img2img",
-            #"https://ae93-34-124-139-173.ngrok.io/sdapi/v1/img2img",
-            "https://comic-caribou-frankly.ngrok-free.app/sdapi/v1/img2img",
+            " https://873d-61-0-126-165.ngrok-free.app/sdapi/v1/img2img",
+            #"https://comic-caribou-frankly.ngrok-free.app/sdapi/v1/img2img",
             json={
                 "init_images": [image],
                 "resize_mode": "1",
